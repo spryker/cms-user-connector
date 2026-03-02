@@ -23,10 +23,6 @@ class CmsVersionUserUpdater implements CmsVersionUserUpdaterInterface
      */
     protected $cmsQueryContainer;
 
-    /**
-     * @param \Spryker\Zed\CmsUserConnector\Dependency\Facade\CmsUserConnectorToUserInterface $userFacade
-     * @param \Spryker\Zed\CmsUserConnector\Dependency\QueryContainer\CmsUserConnectorToCmsQueryContainerInterface $cmsQueryContainer
-     */
     public function __construct(CmsUserConnectorToUserInterface $userFacade, CmsUserConnectorToCmsQueryContainerInterface $cmsQueryContainer)
     {
         $this->userFacade = $userFacade;

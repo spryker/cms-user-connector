@@ -46,9 +46,6 @@ class CmsUserConnectorFacadeTest extends Unit
      */
     protected $cmsUserConnectorFacade;
 
-    /**
-     * @return void
-     */
     public function testUpdateCmsVersionPluginPersistsUserInformation(): void
     {
         $container = new Container();
@@ -75,9 +72,6 @@ class CmsUserConnectorFacadeTest extends Unit
         $this->assertNotNull($cmsVersionTransfer->getFkUser());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandCmsVersionTransferAddsUserInformationToCmsVersionTransfer(): void
     {
         $container = new Container();
@@ -95,11 +89,6 @@ class CmsUserConnectorFacadeTest extends Unit
         $this->assertNotNull($cmsVersionTransfer->getLastName());
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return void
-     */
     protected function prepareTest(Container $container): void
     {
         $container[CmsUserConnectorDependencyProvider::QUERY_CONTAINER_CMS] = function (Container $container) {
@@ -168,17 +157,11 @@ class CmsUserConnectorFacadeTest extends Unit
         return $userBridgeMock;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\UserCollectionTransfer
-     */
     protected function createUserCollectionTransfer(): UserCollectionTransfer
     {
         return (new UserCollectionTransfer())->addUser($this->createUserTransfer());
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     protected function createUserTransfer(): UserTransfer
     {
         $userTransfer = new UserTransfer();
@@ -204,11 +187,6 @@ class CmsUserConnectorFacadeTest extends Unit
             ->getMock();
     }
 
-    /**
-     * @param array $fixtures
-     *
-     * @return \Generated\Shared\Transfer\CmsPageTransfer
-     */
     protected function createCmsPageTransfer(array $fixtures): CmsPageTransfer
     {
         $cmsPageTransfer = new CmsPageTransfer();
@@ -217,9 +195,6 @@ class CmsUserConnectorFacadeTest extends Unit
         return $cmsPageTransfer;
     }
 
-    /**
-     * @return array
-     */
     protected function createCmsPageTransferFixtures(): array
     {
         $fixtures = [

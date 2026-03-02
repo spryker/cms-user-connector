@@ -13,20 +13,9 @@ use Generated\Shared\Transfer\UserTransfer;
 
 interface CmsUserConnectorToUserInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     public function getCurrentUser(): UserTransfer;
 
-    /**
-     * @return bool
-     */
     public function hasCurrentUser(): bool;
 
-    /**
-     * @param \Generated\Shared\Transfer\UserCriteriaTransfer $userCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\UserCollectionTransfer
-     */
     public function getUserCollection(UserCriteriaTransfer $userCriteriaTransfer): UserCollectionTransfer;
 }

@@ -26,27 +26,16 @@ class CmsUserConnectorToUserBridge implements CmsUserConnectorToUserInterface
         $this->userFacade = $userFacade;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\UserTransfer
-     */
     public function getCurrentUser(): UserTransfer
     {
         return $this->userFacade->getCurrentUser();
     }
 
-    /**
-     * @return bool
-     */
     public function hasCurrentUser(): bool
     {
         return $this->userFacade->hasCurrentUser();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\UserCriteriaTransfer $userCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\UserCollectionTransfer
-     */
     public function getUserCollection(UserCriteriaTransfer $userCriteriaTransfer): UserCollectionTransfer
     {
         return $this->userFacade->getUserCollection($userCriteriaTransfer);
